@@ -4,12 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Lexy Loves Joy · Links</title>
-  <meta name="description" content="Style, joy, and getting dressed — find all of Lexy's links here." />
+  <meta name="description" content="Inspiring you to find the beauty in everything!" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
     body {
       min-height: 100vh;
       background: linear-gradient(160deg, #FFF0F7 0%, #FFF9EC 40%, #F0F4FF 100%);
@@ -21,85 +22,216 @@
       position: relative;
       overflow-x: hidden;
     }
-    .dot { position: fixed; border-radius: 50%; opacity: 0.18; pointer-events: none; z-index: 0; }
-    .content { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; width: 100%; }
+
+    .dot { position: fixed; border-radius: 50%; opacity: 0.15; pointer-events: none; z-index: 0; }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      max-width: 420px;
+    }
+
     .avatar-wrap {
-      width: 90px;
-      height: 90px;
+      width: 96px;
+      height: 96px;
       border-radius: 50%;
       overflow: hidden;
-      margin-bottom: 1rem;
-      box-shadow: 0 4px 18px rgba(196, 181, 244, 0.38);
+      margin-bottom: 0.85rem;
+      box-shadow: 0 4px 20px rgba(196,181,244,0.45);
       border: 3px solid #FBBFD8;
+      flex-shrink: 0;
     }
-    .avatar-wrap img { width: 100%; height: 100%; object-fit: cover; }
-    h1 { font-family: 'Playfair Display', serif; font-size: 1.45rem; font-weight: 600; color: #3D3354; margin-bottom: 0.25rem; text-align: center; }
-    .tagline { font-size: 0.85rem; color: #8B7DAA; font-weight: 400; text-align: center; margin-bottom: 2rem; letter-spacing: 0.02em; }
-    .links-stack { display: flex; flex-direction: column; gap: 13px; width: 100%; max-width: 400px; }
-    .link-card { display: flex; align-items: center; gap: 14px; padding: 14px 18px; border-radius: 18px; text-decoration: none; transition: transform 0.15s ease, box-shadow 0.15s ease; border: 1.5px solid transparent; }
-    .link-card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.10); }
-    .link-card.youtube { background: #FFF0F4; border-color: #FBBFD8; }
-    .link-card.ltk     { background: #FDF4FF; border-color: #DDB8F0; }
-    .link-card.amazon  { background: #FFFAEC; border-color: #FAD88A; }
-    .link-icon { width: 40px; height: 40px; border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-    .link-card.youtube .link-icon { background: #FBBFD8; }
+    .avatar-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+    .handle {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #3D3354;
+      margin-bottom: 0.3rem;
+      text-align: center;
+    }
+
+    .bio {
+      font-size: 0.82rem;
+      color: #8B7DAA;
+      text-align: center;
+      margin-bottom: 1.4rem;
+      line-height: 1.5;
+    }
+
+    .shortcuts {
+      display: flex;
+      gap: 14px;
+      margin-bottom: 1.6rem;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .shortcut {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+      flex-shrink: 0;
+    }
+    .shortcut:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(0,0,0,0.12); }
+    .shortcut svg { width: 20px; height: 20px; }
+
+    .shortcut.email   { background: #FBBFD8; }
+    .shortcut.youtube { background: #FBBFD8; }
+    .shortcut.amazon  { background: #FAD88A; }
+    .shortcut.tiktok  { background: #C4B5F4; }
+    .shortcut.pinterest { background: #F5C4B3; }
+
+    .links-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 11px;
+      width: 100%;
+    }
+
+    .link-card {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 13px 16px;
+      border-radius: 14px;
+      text-decoration: none;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+      border: 1.5px solid transparent;
+      position: relative;
+    }
+    .link-card:hover { transform: translateY(-2px); box-shadow: 0 8px 22px rgba(0,0,0,0.09); }
+
+    .link-card.ltk      { background: #FDF4FF; border-color: #DDB8F0; }
+    .link-card.macys    { background: #FFF0F4; border-color: #FBBFD8; }
+    .link-card.amazon   { background: #FFFAEC; border-color: #FAD88A; }
+    .link-card.youtube  { background: #FFF0F4; border-color: #FBBFD8; }
+
+    .link-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
     .link-card.ltk     .link-icon { background: #DDB8F0; }
+    .link-card.macys   .link-icon { background: #FBBFD8; }
     .link-card.amazon  .link-icon { background: #FAD88A; }
+    .link-card.youtube .link-icon { background: #FBBFD8; }
+
     .link-text { flex: 1; }
-    .link-title { font-weight: 500; font-size: 0.95rem; margin: 0 0 2px; color: #3D3354; }
-    .link-sub { font-size: 0.75rem; color: #9B8FB5; margin: 0; }
-    .link-arrow { font-size: 1.1rem; color: #C5AFDD; flex-shrink: 0; }
-    .footer-text { margin-top: 2.2rem; font-size: 0.75rem; color: #BBA8D6; text-align: center; font-family: 'Playfair Display', serif; font-style: italic; }
+    .link-title { font-weight: 600; font-size: 0.9rem; margin: 0 0 1px; color: #3D3354; }
+    .link-sub   { font-size: 0.72rem; color: #9B8FB5; margin: 0; line-height: 1.4; }
+    .link-arrow { font-size: 1rem; color: #C5AFDD; flex-shrink: 0; }
+
+    .footer-text {
+      margin-top: 2rem;
+      font-size: 0.72rem;
+      color: #BBA8D6;
+      text-align: center;
+      font-style: italic;
+    }
   </style>
 </head>
 <body>
-  <div class="dot" style="width:90px;height:90px;background:#FBBFD8;top:4%;left:7%;"></div>
-  <div class="dot" style="width:55px;height:55px;background:#C4B5F4;top:12%;right:9%;"></div>
-  <div class="dot" style="width:40px;height:40px;background:#93C5FD;top:32%;left:3%;"></div>
-  <div class="dot" style="width:70px;height:70px;background:#FAD88A;bottom:16%;right:5%;"></div>
-  <div class="dot" style="width:35px;height:35px;background:#A5C4F8;bottom:8%;left:12%;"></div>
+
+  <div class="dot" style="width:100px;height:100px;background:#FBBFD8;top:3%;left:5%;"></div>
+  <div class="dot" style="width:60px;height:60px;background:#C4B5F4;top:10%;right:7%;"></div>
+  <div class="dot" style="width:45px;height:45px;background:#93C5FD;top:30%;left:2%;"></div>
+  <div class="dot" style="width:75px;height:75px;background:#FAD88A;bottom:14%;right:4%;"></div>
+  <div class="dot" style="width:38px;height:38px;background:#A5C4F8;bottom:7%;left:10%;"></div>
 
   <div class="content">
+
     <div class="avatar-wrap">
       <img src="data:image/webp;base64,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" alt="Lexy Loves Joy" />
     </div>
-    <h1>Lexy Loves Joy ✨</h1>
-    <p class="tagline">@lexylovesjoy · Style, Joy &amp; Getting Dressed</p>
+
+    <p class="handle">@lexylovesjoy</p>
+    <p class="bio">Inspiring you to find the beauty in everything!</p>
+
+    <div class="shortcuts">
+
+      <a class="shortcut email" href="mailto:" aria-label="Email">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <rect x="2" y="4" width="20" height="16" rx="3" stroke="#72243E" stroke-width="1.6"/>
+          <path d="M2 7l10 7 10-7" stroke="#72243E" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+      </a>
+
+      <a class="shortcut youtube" href="https://youtube.com/@lexylovesjoy" aria-label="YouTube">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.97C18.88 4 12 4 12 4s-6.88 0-8.59.45A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.4a2.78 2.78 0 0 0 1.95-1.97A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z" fill="#E8527C"/>
+          <path d="M9.75 15.02V8.98L15.5 12l-5.75 3.02z" fill="white"/>
+        </svg>
+      </a>
+
+      <a class="shortcut amazon" href="https://a.co/d/05pMOHRk" aria-label="Amazon">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <circle cx="12" cy="12" r="10" fill="#F5A623"/>
+          <path d="M7 13.5C9.5 15.5 14.5 15.5 17 13.5" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+          <path d="M15.5 12.5l1.5 1-1 1" stroke="white" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+          <text x="12" y="11.5" text-anchor="middle" fill="white" font-size="4.5" font-weight="bold" font-family="sans-serif">amazon</text>
+        </svg>
+      </a>
+
+      <a class="shortcut tiktok" href="https://tiktok.com/@lexylovesjoy" aria-label="TikTok">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M19 3h-3v9.5a2.5 2.5 0 1 1-2.5-2.5c.17 0 .34.02.5.05V7a6.5 6.5 0 1 0 5 6.5V8.5A8.5 8.5 0 0 0 21 9V6a5.98 5.98 0 0 1-2-3z" fill="#7C5FBC"/>
+        </svg>
+      </a>
+
+      <a class="shortcut pinterest" href="https://pinterest.com/lexylovesjoy" aria-label="Pinterest">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <circle cx="12" cy="12" r="10" fill="#F0997B"/>
+          <path d="M12 4C7.58 4 4 7.58 4 12c0 3.35 2.05 6.22 5 7.41-.07-.62-.13-1.57.03-2.25l.92-3.9s-.24-.47-.24-1.17c0-1.1.64-1.92 1.43-1.92.67 0 1 .5 1 1.1 0 .68-.43 1.69-.66 2.63-.19.78.39 1.42 1.16 1.42 1.39 0 2.32-1.79 2.32-3.9 0-1.61-1.09-2.74-2.96-2.74-2.11 0-3.39 1.58-3.39 3.26 0 .61.18 1.03.45 1.33-.12.46-.38 1.5-.43 1.71-.07.27-.24.33-.55.2-1.35-.56-1.97-2.07-1.97-3.35 0-2.71 2.22-5.83 6.6-5.83 3.47 0 5.79 2.52 5.79 5.22 0 3.49-1.96 6.1-4.83 6.1-.97 0-1.87-.52-2.18-1.11l-.6 2.32c-.22.84-.8 1.9-1.2 2.54.9.28 1.86.43 2.84.43 4.42 0 8-3.58 8-8s-3.58-8-8-8z" fill="white"/>
+        </svg>
+      </a>
+
+    </div>
 
     <div class="links-stack">
 
-      <a class="link-card youtube" href="https://youtube.com/@lexylovesjoy">
+      <a class="link-card ltk" href="https://www.shopltk.com/explore/Lexylovesjoy">
         <div class="link-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.97C18.88 4 12 4 12 4s-6.88 0-8.59.45A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.4a2.78 2.78 0 0 0 1.95-1.97A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z" fill="#E8527C"/>
-            <path d="M9.75 15.02V8.98L15.5 12l-5.75 3.02z" fill="white"/>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M12 21C12 21 3 14.5 3 8.5C3 5.42 5.42 3 8.5 3C10.24 3 11.91 3.85 12 5C12.09 3.85 13.76 3 15.5 3C18.58 3 21 5.42 21 8.5C21 14.5 12 21 12 21Z" fill="#B57BEA" stroke="#B57BEA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </div>
         <div class="link-text">
-          <p class="link-title">Watch on YouTube</p>
-          <p class="link-sub">Joyful Living with Lexy</p>
+          <p class="link-title">💕 L👀K LINKS ✨</p>
+          <p class="link-sub">Shop my Outfits on LTK</p>
         </div>
         <span class="link-arrow" aria-hidden="true">›</span>
       </a>
 
-      <a class="link-card ltk" href="https://www.shopltk.com/explore/lexylovesjoy">
+      <a class="link-card macys" href="https://stylecrew.macys.com/@lexybeautyfash">
         <div class="link-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <circle cx="12" cy="12" r="10" fill="#B57BEA"/>
-            <path d="M8 8h2v6h4v2H8V8z" fill="white"/>
-            <path d="M14 8h2v2h-2V8zM14 11h2v5h-2v-5z" fill="white" opacity="0.7"/>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M12 2l2.5 7.5H22l-6 4.5 2.5 7.5L12 17l-6.5 4.5 2.5-7.5-6-4.5h7.5z" fill="#E8527C"/>
           </svg>
         </div>
         <div class="link-text">
-          <p class="link-title">Shop my LTK</p>
-          <p class="link-sub">Outfits &amp; favorites</p>
+          <p class="link-title">⭐️ Macy's Storefront</p>
+          <p class="link-sub">Shop my Macy's Style Picks</p>
         </div>
         <span class="link-arrow" aria-hidden="true">›</span>
       </a>
 
       <a class="link-card amazon" href="https://a.co/d/05pMOHRk">
         <div class="link-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
             <circle cx="12" cy="12" r="10" fill="#F5A623"/>
             <path d="M7 13.5C9.5 15.5 14.5 15.5 17 13.5" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
             <path d="M15.5 12.5l1.5 1-1 1" stroke="white" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -108,7 +240,21 @@
         </div>
         <div class="link-text">
           <p class="link-title">Amazon Storefront</p>
-          <p class="link-sub">All my must-haves</p>
+          <p class="link-sub">Shop my Amazon Faves</p>
+        </div>
+        <span class="link-arrow" aria-hidden="true">›</span>
+      </a>
+
+      <a class="link-card youtube" href="https://youtube.com/@lexylovesjoy">
+        <div class="link-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.97C18.88 4 12 4 12 4s-6.88 0-8.59.45A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.4a2.78 2.78 0 0 0 1.95-1.97A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z" fill="#E8527C"/>
+            <path d="M9.75 15.02V8.98L15.5 12l-5.75 3.02z" fill="white"/>
+          </svg>
+        </div>
+        <div class="link-text">
+          <p class="link-title">My YouTube Channel!</p>
+          <p class="link-sub">Joyful Living with Lexy</p>
         </div>
         <span class="link-arrow" aria-hidden="true">›</span>
       </a>
@@ -117,5 +263,6 @@
 
     <p class="footer-text">✦ living in my joy era ✦</p>
   </div>
+
 </body>
 </html>
