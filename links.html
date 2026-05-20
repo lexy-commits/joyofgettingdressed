@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lexy Loves Joy · Links</title>
+  <meta name="description" content="Style, joy, and getting dressed — find all of Lexy's links here." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(160deg, #FFF0F7 0%, #FFF9EC 40%, #F0F4FF 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2.5rem 1.25rem 3rem;
+      font-family: 'DM Sans', sans-serif;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    .dot {
+      position: fixed;
+      border-radius: 50%;
+      opacity: 0.18;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+
+    .avatar-wrap {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #FBBFD8, #C4B5F4, #93C5FD);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+      box-shadow: 0 4px 18px rgba(196, 181, 244, 0.38);
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      color: #fff;
+      letter-spacing: -1px;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.45rem;
+      font-weight: 600;
+      color: #3D3354;
+      margin-bottom: 0.25rem;
+      text-align: center;
+    }
+
+    .tagline {
+      font-size: 0.85rem;
+      color: #8B7DAA;
+      font-weight: 400;
+      text-align: center;
+      margin-bottom: 2rem;
+      letter-spacing: 0.02em;
+    }
+
+    .links-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 13px;
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .link-card {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 14px 18px;
+      border-radius: 18px;
+      text-decoration: none;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+      border: 1.5px solid transparent;
+    }
+
+    .link-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.10);
+    }
+
+    .link-card.youtube { background: #FFF0F4; border-color: #FBBFD8; }
+    .link-card.ltk     { background: #FDF4FF; border-color: #DDB8F0; }
+    .link-card.amazon  { background: #FFFAEC; border-color: #FAD88A; }
+    .link-card.website { background: #F0F5FF; border-color: #A5C4F8; }
+
+    .link-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .link-card.youtube .link-icon { background: #FBBFD8; }
+    .link-card.ltk     .link-icon { background: #DDB8F0; }
+    .link-card.amazon  .link-icon { background: #FAD88A; }
+    .link-card.website .link-icon { background: #A5C4F8; }
+
+    .link-text { flex: 1; }
+
+    .link-title {
+      font-weight: 500;
+      font-size: 0.95rem;
+      margin: 0 0 2px;
+      color: #3D3354;
+    }
+
+    .link-sub {
+      font-size: 0.75rem;
+      color: #9B8FB5;
+      margin: 0;
+    }
+
+    .link-arrow {
+      font-size: 1.1rem;
+      color: #C5AFDD;
+      flex-shrink: 0;
+    }
+
+    .footer-text {
+      margin-top: 2.2rem;
+      font-size: 0.75rem;
+      color: #BBA8D6;
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="dot" style="width:90px;height:90px;background:#FBBFD8;top:4%;left:7%;"></div>
+  <div class="dot" style="width:55px;height:55px;background:#C4B5F4;top:12%;right:9%;"></div>
+  <div class="dot" style="width:40px;height:40px;background:#93C5FD;top:32%;left:3%;"></div>
+  <div class="dot" style="width:70px;height:70px;background:#FAD88A;bottom:16%;right:5%;"></div>
+  <div class="dot" style="width:35px;height:35px;background:#A5C4F8;bottom:8%;left:12%;"></div>
+
+  <div class="content">
+    <div class="avatar-wrap">LL</div>
+    <h1>Lexy Loves Joy ✨</h1>
+    <p class="tagline">@lexylovesjoy · Style, Joy &amp; Getting Dressed</p>
+
+    <div class="links-stack">
+
+      <a class="link-card youtube" href="https://youtube.com/@lexylovesjoy">
+        <div class="link-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.97C18.88 4 12 4 12 4s-6.88 0-8.59.45A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.4a2.78 2.78 0 0 0 1.95-1.97A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z" fill="#E8527C"/>
+            <path d="M9.75 15.02V8.98L15.5 12l-5.75 3.02z" fill="white"/>
+          </svg>
+        </div>
+        <div class="link-text">
+          <p class="link-title">Watch on YouTube</p>
+          <p class="link-sub">Joyful Living with Lexy</p>
+        </div>
+        <span class="link-arrow" aria-hidden="true">›</span>
+      </a>
+
+      <a class="link-card ltk" href="https://www.shopltk.com/explore/lexylovesjoy">
+        <div class="link-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <circle cx="12" cy="12" r="10" fill="#B57BEA"/>
+            <path d="M8 8h2v6h4v2H8V8z" fill="white"/>
+            <path d="M14 8h2v2h-2V8zM14 11h2v5h-2v-5z" fill="white" opacity="0.7"/>
+          </svg>
+        </div>
+        <div class="link-text">
+          <p class="link-title">Shop my LTK</p>
+          <p class="link-sub">Outfits &amp; favorites</p>
+        </div>
+        <span class="link-arrow" aria-hidden="true">›</span>
+      </a>
+
+      <a class="link-card amazon" href="https://amazon.com/shop/lexylovesjoy">
+        <div class="link-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <circle cx="12" cy="12" r="10" fill="#F5A623"/>
+            <path d="M7 13.5C9.5 15.5 14.5 15.5 17 13.5" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M15.5 12.5l1.5 1-1 1" stroke="white" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+            <text x="12" y="11.5" text-anchor="middle" fill="white" font-size="4.5" font-weight="bold" font-family="sans-serif">amazon</text>
+          </svg>
+        </div>
+        <div class="link-text">
+          <p class="link-title">Amazon Storefront</p>
+          <p class="link-sub">All my must-haves</p>
+        </div>
+        <span class="link-arrow" aria-hidden="true">›</span>
+      </a>
+
+      <a class="link-card website" href="https://joyofgettingdressed.com">
+        <div class="link-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <circle cx="12" cy="12" r="9" stroke="#4A90D9" stroke-width="1.8"/>
+            <path d="M12 3c0 0-3 4-3 9s3 9 3 9" stroke="#4A90D9" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M12 3c0 0 3 4 3 9s-3 9-3 9" stroke="#4A90D9" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M3 12h18" stroke="#4A90D9" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M4.5 7.5h15M4.5 16.5h15" stroke="#4A90D9" stroke-width="1.2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="link-text">
+          <p class="link-title">Joy of Getting Dressed</p>
+          <p class="link-sub">joyofgettingdressed.com</p>
+        </div>
+        <span class="link-arrow" aria-hidden="true">›</span>
+      </a>
+
+    </div>
+
+    <p class="footer-text">✦ living in my joy era ✦</p>
+  </div>
+
+</body>
+</html>
